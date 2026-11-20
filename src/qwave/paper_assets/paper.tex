@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\pending}[1]{\par\noindent\textbf{UNFILLED:} #1\par}
+\title{Phaseward: a research-paper scaffold for coherent one-dimensional transport}
+\author{Author names and affiliations: to be supplied}
+\date{Draft scaffold; not a report of a discovery}
+\begin{document}
+\maketitle
+\begin{abstract}
+\pending{Write the abstract only after the frozen study, numerical validation,
+full literature review and limitations have been assessed. No performance,
+novelty, hardware validation or discovery claim is asserted here.}
+\end{abstract}
+\section{Introduction}
+\pending{State the transport question, motivation and boundaries of the idealized
+model. Make any proposed contribution conditional on evidence. Distinguish
+simulation from experiment and gate energies from physical electrode voltages.}
+\section{Related Work}
+The screened bibliography includes scattering/conductance theory
+\cite{fisher1981}, disorder-aware transport control \cite{coopmans2022},
+derivative-based robust control \cite{propson2022}, disorder-averaged control
+\cite{araki2023}, and perturbative robustness \cite{poggi2024}.
+These are starting points for comparison, not a claim that their models,
+observables or constraints coincide with Phaseward.
+\pending{Complete full-text review using the literature matrix. Establish any
+precise gap with evidence; absence from this initial screening proves no gap.}
+\section{Model}
+\input{sections/model}
+\section{Numerical Methods}
+\pending{Describe the centered finite-difference Hamiltonian and exact retarded
+semi-infinite discrete leads, open-band restrictions, pivoted banded solves,
+flux normalization and phase reference planes. Report spatial and energy
+convergence, residuals, analytical checks and the second-method cross-check.
+Copy actual settings from the support tables. Never equate machine precision
+conservation with continuum accuracy.}
+\section{Optimization}
+\input{sections/optimization}
+\section{Experimental Protocol}
+\pending{Declare the frozen target, clean-throughput and raw-fidelity constraints,
+gate bounds, A/B/C/D baselines, common starts and work caps, seed partitions,
+primary estimand, practical margin, multiplicity, and failed-trial policy.
+Separate numerical diagnostics from physical findings. An existing observed run
+cannot be retrospectively preregistered. Include training/initialization
+replications if the claimed estimand extends beyond the specific frozen designs.}
+\section{Results}
+\input{sections/results}
+\section{Discussion}
+\pending{Interpret only verified measured outcomes, including contradictions,
+null findings, missing data and feasibility failures. Compare with verified
+prior work and avoid converting a surrogate reduction into a transport claim.}
+\section{Limitations}
+The intended model omits decoherence, many-electron interactions, contacts beyond
+ideal leads, fabrication physics and a calibrated voltage-to-potential mapping.
+Discrete-band, energy-window, KL-truncation and perturbative errors must be
+assessed separately. Conditional fidelity alone can hide negligible throughput.
+\pending{Add observed numerical and statistical limitations, including finite
+sample uncertainty, conditional inference and any failed convergence checks.}
+\section{Conclusion}
+\pending{Write only conclusions supported by the completed study. No conclusion
+about superiority, novelty, publication readiness or hardware is supplied.}
+\bibliographystyle{plain}
+\bibliography{verified_references}
+\end{document}

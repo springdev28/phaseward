@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "experiment": "wave_packet",
+  "unit_system": "nm_meV_ps",
+  "scattering": {
+    "schema_version": 1,
+    "experiment": "stationary_scattering",
+    "unit_system": "nm_meV",
+    "effective_mass_ratio": 0.067,
+    "x_min_nm": -40.0,
+    "x_max_nm": 40.0,
+    "grid_points": 801,
+    "energy_min_mev": 1.0,
+    "energy_max_mev": 100.0,
+    "energy_points": 801,
+    "left_lead_mev": 0.0,
+    "right_lead_mev": 0.0,
+    "potential": {
+      "kind": "rectangular",
+      "offset_mev": 0.0,
+      "height_mev": 40.0,
+      "center_nm": 0.0,
+      "width_nm": 10.0
+    },
+    "conservation_tolerance": 1e-8
+  },
+  "reference_potential": {"kind": "free", "offset_mev": 0.0},
+  "central_energy_mev": 40.0,
+  "bandwidth_mev": 4.0,
+  "bandwidth_sweep_mev": [1.0, 2.0, 4.0, 6.0, 8.0],
+  "minimum_transmission_probability": 1e-8,
+  "delay_alignment": {
+    "enabled": true,
+    "min_ps": -0.25,
+    "max_ps": 0.25,
+    "grid_points": 201,
+    "xatol_ps": 1e-7
+  },
+  "reconstruction": {
+    "enabled": true,
+    "source_offset_nm": -200.0,
+    "observation_time_ps": 0.9,
+    "lead_extent_nm": 600.0,
+    "position_points": 1201
+  }
+}

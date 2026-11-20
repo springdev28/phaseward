@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "search_date": "2026-11-20",
+  "review_type": "Initial primary-source screening, not systematic or exhaustive",
+  "queries": [
+    "optimal control disordered quantum systems transport",
+    "robust quantum optimal control derivative trajectory optimization",
+    "robust quantum control disorder dressed evolution",
+    "universally robust quantum control",
+    "Fisher Lee relation conductivity transmission matrix"
+  ],
+  "selection_rule": "Include scattering foundation and directly relevant disorder/derivative robustness prior work; do not select on favorable Phaseward outcomes.",
+  "records": [
+    {
+      "citation_key": "fisher1981",
+      "title": "Relation between conductivity and transmission matrix",
+      "authors": [
+        "Daniel S. Fisher",
+        "Patrick A. Lee"
+      ],
+      "year": 1981,
+      "journal": "Physical Review B",
+      "volume": "23",
+      "page_or_article": "6851",
+      "doi": "10.1103/PhysRevB.23.6851",
+      "primary_urls": [
+        "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.23.6851"
+      ],
+      "verified_on": "2026-11-20",
+      "verification_scope": "Identity, authors, title, year, journal/DOI and abstract-level model/method/findings checked on primary publisher or author-uploaded record.",
+      "full_text_review_complete": false,
+      "quantitative_replication": false,
+      "gap_status": "Unresolved; no proposal-specific absence established"
+    },
+    {
+      "citation_key": "coopmans2022",
+      "title": "Optimal Control in Disordered Quantum Systems",
+      "authors": [
+        "Luuk Coopmans",
+        "Steve Campbell",
+        "Gabriele De Chiara",
+        "Anthony Kiely"
+      ],
+      "year": 2022,
+      "journal": "Physical Review Research",
+      "volume": "4",
+      "page_or_article": "043138",
+      "doi": "10.1103/PhysRevResearch.4.043138",
+      "primary_urls": [
+        "https://arxiv.org/abs/2201.02029v2"
+      ],
+      "verified_on": "2026-11-20",
+      "verification_scope": "Identity, authors, title, year, journal/DOI and abstract-level model/method/findings checked on primary publisher or author-uploaded record.",
+      "full_text_review_complete": false,
+      "quantitative_replication": false,
+      "gap_status": "Unresolved; no proposal-specific absence established"
+    },
+    {
+      "citation_key": "propson2022",
+      "title": "Robust Quantum Optimal Control with Trajectory Optimization",
+      "authors": [
+        "Thomas Propson",
+        "Brian E. Jackson",
+        "Jens Koch",
+        "Zachary Manchester",
+        "David I. Schuster"
+      ],
+      "year": 2022,
+      "journal": "Physical Review Applied",
+      "volume": "17",
+      "page_or_article": "014036",
+      "doi": "10.1103/PhysRevApplied.17.014036",
+      "primary_urls": [
+        "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.17.014036",
+        "https://arxiv.org/abs/2103.15716v1"
+      ],
+      "verified_on": "2026-11-20",
+      "verification_scope": "Identity, authors, title, year, journal/DOI and abstract-level model/method/findings checked on primary publisher or author-uploaded record.",
+      "full_text_review_complete": false,
+      "quantitative_replication": false,
+      "gap_status": "Unresolved; no proposal-specific absence established"
+    },
+    {
+      "citation_key": "araki2023",
+      "title": "Robust quantum control with disorder-dressed evolution",
+      "authors": [
+        "Tenzan Araki",
+        "Franco Nori",
+        "Clemens Gneiting"
+      ],
+      "year": 2023,
+      "journal": "Physical Review A",
+      "volume": "107",
+      "page_or_article": "032609",
+      "doi": "10.1103/PhysRevA.107.032609",
+      "primary_urls": [
+        "https://arxiv.org/abs/2208.07008v2"
+      ],
+      "verified_on": "2026-11-20",
+      "verification_scope": "Identity, authors, title, year, journal/DOI and abstract-level model/method/findings checked on primary publisher or author-uploaded record.",
+      "full_text_review_complete": false,
+      "quantitative_replication": false,
+      "gap_status": "Unresolved; no proposal-specific absence established"
+    },
+    {
+      "citation_key": "poggi2024",
+      "title": "Universally Robust Quantum Control",
+      "authors": [
+        "Pablo M. Poggi",
+        "Gabriele De Chiara",
+        "Steve Campbell",
+        "Anthony Kiely"
+      ],
+      "year": 2024,
+      "journal": "Physical Review Letters",
+      "volume": "132",
+      "page_or_article": "193801",
+      "doi": "10.1103/PhysRevLett.132.193801",
+      "primary_urls": [
+        "https://arxiv.org/abs/2309.14437v2"
+      ],
+      "verified_on": "2026-11-20",
+      "verification_scope": "Identity, authors, title, year, journal/DOI and abstract-level model/method/findings checked on primary publisher or author-uploaded record.",
+      "full_text_review_complete": false,
+      "quantitative_replication": false,
+      "gap_status": "Unresolved; no proposal-specific absence established"
+    }
+  ]
+}

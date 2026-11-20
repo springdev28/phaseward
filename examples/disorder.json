@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "experiment": "potential_disorder",
+  "unit_system": "nm_meV",
+  "model": {
+    "scattering": {
+      "schema_version": 1,
+      "experiment": "stationary_scattering",
+      "unit_system": "nm_meV",
+      "effective_mass_ratio": 0.067,
+      "x_min_nm": -40,
+      "x_max_nm": 40,
+      "grid_points": 401,
+      "energy_min_mev": 8,
+      "energy_max_mev": 80,
+      "energy_points": 73,
+      "left_lead_mev": 0,
+      "right_lead_mev": 0,
+      "potential": {
+        "kind": "free",
+        "offset_mev": 0
+      },
+      "conservation_tolerance": 1e-8
+    },
+    "channel": {
+      "x_min_nm": -30,
+      "x_max_nm": 30
+    },
+    "gates": {
+      "normalization": "sampled_peak_abs",
+      "taper_nm": 5,
+      "total_abs_bound_mev": 60,
+      "profiles": [
+        {
+          "name": "gate_1",
+          "amplitude_mev": 8,
+          "bounds_mev": [
+            -30,
+            30
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": -18,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_2",
+          "amplitude_mev": 15,
+          "bounds_mev": [
+            -30,
+            30
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": -6,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_3",
+          "amplitude_mev": 12,
+          "bounds_mev": [
+            -30,
+            30
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": 6,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_4",
+          "amplitude_mev": 6,
+          "bounds_mev": [
+            -30,
+            30
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": 18,
+            "sigma_nm": 4
+          }
+        }
+      ]
+    },
+    "disorder": {
+      "sigma_mev": 2,
+      "correlation_length_nm": 5,
+      "kernel": "gaussian",
+      "boundary_taper_nm": 0,
+      "retained_modes": 8
+    }
+  },
+  "sample_count": 4096,
+  "seed": 1729
+}

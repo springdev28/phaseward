@@ -1,0 +1,30 @@
+The assumed physical model is a coherent single electron with constant effective
+mass $m^*>0$ in one spatial dimension:
+\[
+i\hbar\partial_t\psi(x,t)=-\frac{\hbar^2}{2m^*}\partial_x^2\psi(x,t)+V(x)\psi(x,t).
+\]
+Here $x$ is position (internally metres), $t$ is time (seconds), $\hbar$ is the
+reduced Planck constant (joule seconds), $V$ is potential energy (joules), and
+$\psi$ is a position amplitude (metres$^{-1/2}$) for a normalized packet.
+The domain has a finite device region and uniform semi-infinite leads. The
+public API uses nm, meV and ps with explicit conversion. This equation is an
+assumption, not a derivation from classical mechanics.
+
+For elastic propagation, let $t(E)$ and $r(E)$ be complex amplitudes in the
+unit-flux incoming/outgoing lead basis at explicitly fixed reference planes.
+Then $T(E)=|t(E)|^2$ and $R(E)=|r(E)|^2$ are dimensionless probabilities for the
+open channel. Phase is retained in the amplitudes. Let $A(E)$ be an
+energy-normalized incoming amplitude (meV$^{-1/2}$ at the API), with
+$\int_{\mathcal E}|A(E)|^2\,dE=1$ over the declared finite interval
+$\mathcal E$ of propagating lead energies. Define
+\[
+P=\int_{\mathcal E}|A(E)t(E)|^2\,dE,\qquad
+b(E)=\frac{A(E)t(E)}{\sqrt P},\qquad
+F=\left|\int_{\mathcal E}b_{\rm target}(E)^*b(E)\,dE\right|^2.
+\]
+$b$ and $b_{\rm target}$ are separately normalized conditional transmitted
+states; $F$ is undefined when either cannot be normalized. $P$ and $F$ must be
+reported separately. A global phase cancels from $F$. Optional delay alignment
+uses a declared bounded lag search; its bound, sign, resolution and boundary
+status accompany raw $F$. Numerical quadrature and finite-window normalization
+are approximations with recorded settings.

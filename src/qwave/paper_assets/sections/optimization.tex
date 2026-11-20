@@ -1,0 +1,29 @@
+For a channel coordinate $x$ in nm, write the potential energy in meV as
+\[
+V(x;u,\eta)=V_0(x)+\sum_{j=1}^M u_jg_j(x)+\sum_{k=1}^K\eta_k\phi_k(x).
+\]
+$V_0$ is the declared background, $u_j$ are bounded gate energy amplitudes (meV),
+and $g_j$ are dimensionless peak-normalized shapes confined to the channel.
+The covariance shapes obey $\Phi^\mathsf{T}W\Phi=I$, where $W$ contains spatial
+trapezoidal weights (nm); hence $\phi_k$ has units nm$^{-1/2}$.
+For independent standard-normal $z_k$, $\eta_k=\sqrt{\lambda_k}z_k$ has
+units meV$\sqrt{\text{nm}}$, and its variance $\lambda_k$ has units meV$^2$nm.
+$K$ is the retained covariance rank. This weighted finite-grid representation
+approximates the declared spatial covariance; its omitted variance is reported.
+
+The candidate surrogate is
+\[
+J(u)=\sum_{k=1}^K\lambda_k
+\int_{\mathcal E}w(E)
+\left|\left.\frac{\partial t(E;u,\eta)}{\partial\eta_k}\right|_{\eta=0}\right|^2dE.
+\]
+$w\geq0$ is a normalized importance density (meV$^{-1}$), normally $|A|^2$,
+with any alternative declared. $J$ is dimensionless; $J/\sigma^2$ has units
+meV$^{-2}$ for nonzero nominal disorder amplitude $\sigma$ in meV. The derivative
+acts on the complex amplitude at fixed leads and phase planes. To first order
+in zero-mean covariance coefficients, $J$ describes weighted mean squared
+amplitude perturbation. It is neither conditional fidelity nor a failure
+probability, and ignores higher-order response and omitted covariance modes.
+\pending{Insert actual differentiation steps, step checks, optimizer settings,
+constraints and costs from the frozen run. Compare fixed gates, clean optimization,
+training-set Monte Carlo optimization and this surrogate with fair budgets.}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "experiment": "gate_optimization",
+  "unit_system": "nm_meV",
+  "model": {
+    "scattering": {
+      "schema_version": 1,
+      "experiment": "stationary_scattering",
+      "unit_system": "nm_meV",
+      "effective_mass_ratio": 0.067,
+      "x_min_nm": -40,
+      "x_max_nm": 40,
+      "grid_points": 201,
+      "energy_min_mev": 12,
+      "energy_max_mev": 68,
+      "energy_points": 57,
+      "left_lead_mev": 0,
+      "right_lead_mev": 0,
+      "potential": {
+        "kind": "free",
+        "offset_mev": 0
+      },
+      "conservation_tolerance": 1e-08
+    },
+    "channel": {
+      "x_min_nm": -30,
+      "x_max_nm": 30
+    },
+    "gates": {
+      "normalization": "sampled_peak_abs",
+      "taper_nm": 5,
+      "total_abs_bound_mev": 60,
+      "profiles": [
+        {
+          "name": "gate_1",
+          "amplitude_mev": 8,
+          "bounds_mev": [
+            -25,
+            25
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": -18,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_2",
+          "amplitude_mev": 15,
+          "bounds_mev": [
+            -25,
+            25
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": -6,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_3",
+          "amplitude_mev": 12,
+          "bounds_mev": [
+            -25,
+            25
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": 6,
+            "sigma_nm": 4
+          }
+        },
+        {
+          "name": "gate_4",
+          "amplitude_mev": 6,
+          "bounds_mev": [
+            -25,
+            25
+          ],
+          "shape": {
+            "kind": "gaussian",
+            "center_nm": 18,
+            "sigma_nm": 4
+          }
+        }
+      ]
+    },
+    "disorder": {
+      "sigma_mev": 2,
+      "correlation_length_nm": 5,
+      "kernel": "gaussian",
+      "boundary_taper_nm": 0,
+      "retained_modes": 6
+    }
+  },
+  "packet": {
+    "central_energy_mev": 40,
+    "bandwidth_mev": 6
+  },
+  "target_potential": {
+    "kind": "free",
+    "offset_mev": 0
+  },
+  "objective": {
+    "weighting": "incoming_probability",
+    "normalization": "nominal_variance",
+    "transmission_weight": 0.5
+  },
+  "constraints": {
+    "minimum_clean_transmission_values": [
+      0.85
+    ],
+    "minimum_clean_fidelity": 0.95,
+    "max_gate_gradient_mev_per_nm": 5,
+    "feasibility_tolerance": 1e-07
+  },
+  "optimizer": {
+    "method": "SLSQP",
+    "starts": 2,
+    "initialization_seed": 41001,
+    "forward_work_budget": 120,
+    "maxiter": 12,
+    "ftol": 1e-07,
+    "gate_step_mev": 0.01,
+    "cache_entries": 128
+  },
+  "diagnostics": {
+    "gate_steps_mev": [
+      0.1,
+      0.01,
+      0.005,
+      1e-07
+    ],
+    "gradient_atol": 1e-07,
+    "gradient_rtol": 0.005,
+    "mode_steps_mev_sqrt_nm": [
+      0.1,
+      0.01,
+      0.001,
+      1e-06,
+      1e-09
+    ],
+    "mode_derivative_atol": 1e-07
+  },
+  "ensembles": {
+    "representation": "retained_kl",
+    "training_samples": 3,
+    "validation_samples": 4,
+    "heldout_samples": 8,
+    "training_seed": 42001,
+    "validation_seed": 43001,
+    "heldout_seed": 44001
+  }
+}

@@ -1,0 +1,25 @@
+# Local scientific panel. Do not enable deployment, usage telemetry or remote assets.
+[server]
+address = "127.0.0.1"
+port = 8501
+headless = true
+fileWatcherType = "none"
+enableStaticServing = false
+maxUploadSize = 2
+enableCORS = true
+enableXsrfProtection = true
+
+[browser]
+serverAddress = "127.0.0.1"
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#087E8B"
+backgroundColor = "#FAFBFD"
+secondaryBackgroundColor = "#EDF2F7"
+textColor = "#152B42"
+font = "sans-serif"

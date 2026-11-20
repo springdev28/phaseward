@@ -1,0 +1,495 @@
+[
+  {
+    "equations": [
+      {
+        "label": "M1",
+        "link": "01-tools.md#eq-m1"
+      },
+      {
+        "label": "M3",
+        "link": "01-tools.md#eq-m3"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.quadrature_weights"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_positive_quadrature_matches_scipy_and_integrates_linear_function"
+    ],
+    "figures": [
+      "02_packets/packet-checks.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "M2",
+        "link": "01-tools.md#eq-m2"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.analyze_packet"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_identical_reference_and_global_phase"
+    ],
+    "figures": [
+      "02_packets/packet-checks.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "M4",
+        "link": "01-tools.md#eq-m4"
+      }
+    ],
+    "functions": [
+      "qwave.disorder.covariance_modes"
+    ],
+    "tests": [
+      "tests/test_disorder.py::test_weighted_kl_orthogonality_covariance_reconstruction_and_variance_fraction"
+    ],
+    "figures": [
+      "03_covariance/covariance-modes.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "S1",
+        "link": "02-model.md#eq-s1"
+      },
+      {
+        "label": "S2",
+        "link": "02-model.md#eq-s2"
+      },
+      {
+        "label": "S3",
+        "link": "02-model.md#eq-s3"
+      }
+    ],
+    "functions": [
+      "qwave.scattering.solve_scattering"
+    ],
+    "tests": [
+      "tests/test_scattering.py::test_free_channel_complex_phase_and_flux"
+    ],
+    "figures": [
+      "01_scattering/scattering.png"
+    ],
+    "note": "S1 is an assumed physical model. The test verifies its discrete stationary implementation, not the truth of quantum mechanics or a transient PDE integrator."
+  },
+  {
+    "equations": [
+      {
+        "label": "S4",
+        "link": "03-scattering.md#eq-s4"
+      }
+    ],
+    "functions": [
+      "qwave.scattering.solve_scattering"
+    ],
+    "tests": [
+      "tests/test_scattering.py::test_unequal_lead_flux_normalization_against_discrete_step",
+      "tests/test_scattering.py::test_free_channel_complex_phase_and_flux"
+    ],
+    "figures": [
+      "01_scattering/scattering.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "S5",
+        "link": "03-scattering.md#eq-s5"
+      },
+      {
+        "label": "S6",
+        "link": "03-scattering.md#eq-s6"
+      }
+    ],
+    "functions": [
+      "qwave.scattering.solve_scattering"
+    ],
+    "tests": [
+      "tests/test_scattering.py::test_free_phase_converges_to_continuum",
+      "tests/test_scattering.py::test_forbidden_discrete_lead_energies_rejected"
+    ],
+    "figures": [
+      "01_scattering/scattering-convergence.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "S7",
+        "link": "03-scattering.md#eq-s7"
+      }
+    ],
+    "functions": [
+      "qwave.scattering.solve_scattering"
+    ],
+    "tests": [
+      "tests/test_scattering.py::test_opaque_barrier_has_no_transfer_matrix_overflow",
+      "tests/test_scattering.py::test_closed_right_channel_is_explicitly_unsupported"
+    ],
+    "figures": [
+      "01_scattering/scattering.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "S8",
+        "link": "03-scattering.md#eq-s8"
+      }
+    ],
+    "functions": [
+      "qwave.references.rectangular_transmission_amplitude",
+      "qwave.references.rectangular_probability",
+      "qwave.references.continuum_ode_reference"
+    ],
+    "tests": [
+      "tests/test_scattering.py::test_barrier_above_below_and_at_top_converges",
+      "tests/test_scattering.py::test_gaussian_matches_independent_continuum_ode"
+    ],
+    "figures": [
+      "01_scattering/scattering-convergence.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "P1",
+        "link": "04-packets.md#eq-p1"
+      },
+      {
+        "label": "P2",
+        "link": "04-packets.md#eq-p2"
+      },
+      {
+        "label": "P8",
+        "link": "04-packets.md#eq-p8"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.reconstruct_lead_packet"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_discrete_lead_jacobian_gives_spatial_parseval_norm",
+      "tests/test_wavepackets.py::test_energy_to_k_jacobian_matches_analytic_position_gaussian"
+    ],
+    "figures": [
+      "02_packets/packets.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "P3",
+        "link": "04-packets.md#eq-p3"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.gaussian_packet"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_truncated_gaussian_is_a_normalized_amplitude"
+    ],
+    "figures": [
+      "02_packets/packets.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "P4",
+        "link": "04-packets.md#eq-p4"
+      },
+      {
+        "label": "P5",
+        "link": "04-packets.md#eq-p5"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.analyze_packet"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_constant_loss_retains_conditional_fidelity_but_flags_throughput",
+      "tests/test_wavepackets.py::test_zero_or_underflowing_transmission_has_no_fabricated_state"
+    ],
+    "figures": [
+      "02_packets/packets.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "P6",
+        "link": "04-packets.md#eq-p6"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.analyze_packet",
+      "qwave.wavepackets.DelaySearch"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_linear_phase_has_analytic_raw_fidelity_and_signed_delay",
+      "tests/test_wavepackets.py::test_bounded_alignment_reports_boundary_and_residual_distortion"
+    ],
+    "figures": [
+      "02_packets/packet-checks.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "P7",
+        "link": "04-packets.md#eq-p7"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.analyze_packet"
+    ],
+    "tests": [
+      "tests/test_wavepackets.py::test_quadratic_phase_distorts_state_without_changing_probability",
+      "tests/test_wavepackets.py::test_amplitude_filter_changes_both_throughput_and_fidelity",
+      "tests/test_wavepackets.py::test_quadrature_refinement_converges_to_independent_adaptive_integral"
+    ],
+    "figures": [
+      "02_packets/packet-checks.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "G1",
+        "link": "05-disorder.md#eq-g1"
+      }
+    ],
+    "functions": [
+      "qwave.gates.build_gates"
+    ],
+    "tests": [
+      "tests/test_disorder.py::test_gate_contributions_bounds_and_lead_exclusion"
+    ],
+    "figures": [
+      "04_sensitivity_objective/gates-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "D1",
+        "link": "05-disorder.md#eq-d1"
+      }
+    ],
+    "functions": [
+      "qwave.disorder.covariance_matrix"
+    ],
+    "tests": [
+      "tests/test_disorder.py::test_kernel_variance_length_scale_and_positive_semidefiniteness",
+      "tests/test_disorder.py::test_boundary_taper_changes_covariance_explicitly"
+    ],
+    "figures": [
+      "03_covariance/covariance-samples.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "D2",
+        "link": "05-disorder.md#eq-d2"
+      },
+      {
+        "label": "D4",
+        "link": "05-disorder.md#eq-d4"
+      }
+    ],
+    "functions": [
+      "qwave.disorder.covariance_modes"
+    ],
+    "tests": [
+      "tests/test_disorder.py::test_weighted_kl_orthogonality_covariance_reconstruction_and_variance_fraction",
+      "tests/test_disorder.py::test_covariance_eigenvalues_converge_with_physical_grid_weights"
+    ],
+    "figures": [
+      "03_covariance/covariance-modes.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "D3",
+        "link": "05-disorder.md#eq-d3"
+      }
+    ],
+    "functions": [
+      "qwave.disorder.sample_disorder",
+      "qwave.disorder.covariance_statistics"
+    ],
+    "tests": [
+      "tests/test_disorder.py::test_seeded_covariance_scaling_and_statistical_error",
+      "tests/test_disorder.py::test_covariance_amplitude_scaling_is_not_sample_normalization"
+    ],
+    "figures": [
+      "03_covariance/covariance-samples.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "L1",
+        "link": "06-sensitivity.md#eq-l1"
+      }
+    ],
+    "functions": [
+      "qwave.sensitivity.validate_linearization"
+    ],
+    "tests": [
+      "tests/test_sensitivity.py::test_taylor_remainder_convergence_and_separate_truncation_error"
+    ],
+    "figures": [
+      "04_sensitivity_objective/sensitivity-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "L2",
+        "link": "06-sensitivity.md#eq-l2"
+      }
+    ],
+    "functions": [
+      "qwave.sensitivity.derivative_study"
+    ],
+    "tests": [
+      "tests/test_sensitivity.py::test_centered_complex_derivative_converges_quadratically_before_roundoff",
+      "tests/test_sensitivity.py::test_unresolvable_small_steps_are_reported"
+    ],
+    "figures": [
+      "04_sensitivity_objective/sensitivity-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "L3",
+        "link": "06-sensitivity.md#eq-l3"
+      }
+    ],
+    "functions": [
+      "qwave.sensitivity.transmission_gradient"
+    ],
+    "tests": [
+      "tests/test_sensitivity.py::test_free_channel_gradient_matches_independent_discrete_born_result",
+      "tests/test_sensitivity.py::test_implicit_local_response_matches_independent_site_perturbations"
+    ],
+    "figures": [
+      "04_sensitivity_objective/sensitivity-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "L4",
+        "link": "06-sensitivity.md#eq-l4"
+      }
+    ],
+    "functions": [
+      "qwave.optimization.OptimizationProblem.sensitivity"
+    ],
+    "tests": [
+      "tests/test_sensitivity.py::test_modal_variance_matches_direct_covariance_contraction"
+    ],
+    "figures": [
+      "04_sensitivity_objective/sensitivity-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "O1",
+        "link": "07-objective.md#eq-o1"
+      }
+    ],
+    "functions": [
+      "qwave.optimization.OptimizationProblem.sensitivity"
+    ],
+    "tests": [
+      "tests/test_optimization.py::test_objective_matches_independent_free_born_and_covariance_contraction",
+      "tests/test_optimization.py::test_normalization_removes_nominal_sigma_squared"
+    ],
+    "figures": [
+      "04_sensitivity_objective/gates-objective.png"
+    ],
+    "note": ""
+  },
+  {
+    "equations": [
+      {
+        "label": "O2",
+        "link": "07-objective.md#eq-o2"
+      },
+      {
+        "label": "O3",
+        "link": "07-objective.md#eq-o3"
+      }
+    ],
+    "functions": [
+      "qwave.wavepackets.analyze_packet",
+      "qwave.sensitivity.transmission_gradient"
+    ],
+    "tests": [
+      "tests/test_derivation_package.py::test_documented_projection_identity_and_probability_bound",
+      "tests/test_derivation_package.py::test_documented_projected_taylor_coefficient",
+      "tests/test_derivation_package.py::test_global_phase_surrogate_is_not_fidelity_loss"
+    ],
+    "figures": [
+      "02_packets/packets.png",
+      "04_sensitivity_objective/gates-objective.png"
+    ],
+    "note": "The new tests verify O2 and the exact probability-change inequality. Markov's inequality is derived in O3; no real-world probability bound is implemented or claimed. Figures illustrate the distinct metrics."
+  },
+  {
+    "equations": [
+      {
+        "label": "O4",
+        "link": "07-objective.md#eq-o4"
+      }
+    ],
+    "functions": [
+      "qwave.optimization.OptimizationProblem.residuals",
+      "qwave.optimization.run_multistart"
+    ],
+    "tests": [
+      "tests/test_optimization.py::test_negligible_throughput_is_infeasible_despite_high_conditional_fidelity",
+      "tests/test_optimization.py::test_budgeted_slsqp_selects_only_feasible_observed_candidates"
+    ],
+    "figures": [
+      "04_sensitivity_objective/gates-objective.png"
+    ],
+    "note": "The notebook evaluates a fixed design and saves residuals; it does not rerun or rank optimizers."
+  }
+]

@@ -1,0 +1,27 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{graphicx,booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\title{Phaseward: frozen-run support appendix}
+\author{}
+\date{Generated data descriptions; not a manuscript Results section}
+\begin{document}
+\maketitle
+\section{Scope and reproducibility}
+\input{reproducibility}
+\section{Recorded primary comparisons}
+All outcomes are retained. Tables describe this frozen design and seed ensemble;
+they are not a population-wide or hardware performance claim. The display uses
+eight significant digits; full precision and all exploratory comparisons are
+available in the CSV/JSON tables.
+\input{../tables/primary_comparisons}
+\section{Figure descriptions and original figures}
+\input{caption_figures}
+\clearpage
+\section{Physical and packet parameters}
+\input{../tables/parameters}
+\section{Algorithms and protocol settings}
+\input{../tables/algorithm_settings}
+\end{document}

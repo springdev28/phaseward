@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment": "stationary_scattering",
+  "unit_system": "nm_meV",
+  "effective_mass_ratio": 0.067,
+  "x_min_nm": -40.0,
+  "x_max_nm": 40.0,
+  "grid_points": 801,
+  "energy_min_mev": 1.0,
+  "energy_max_mev": 120.0,
+  "energy_points": 477,
+  "left_lead_mev": 0.0,
+  "right_lead_mev": 0.0,
+  "potential": {
+    "kind": "rectangular",
+    "offset_mev": 0.0,
+    "height_mev": 40.0,
+    "center_nm": 0.0,
+    "width_nm": 10.0
+  },
+  "conservation_tolerance": 1e-8
+}

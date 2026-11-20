@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "experiment": "numerical_demo",
+  "unit_system": "dimensionless",
+  "seed": 1729,
+  "grid_points": 257,
+  "monte_carlo_samples": 1024
+}
